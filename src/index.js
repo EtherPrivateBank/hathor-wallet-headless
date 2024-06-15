@@ -80,6 +80,11 @@ async function startHeadless() {
 
   const app = createApp(config);
 
+  app.get('/health-digital-ocean', (req, res) => {
+    console.log('Health check accessed');
+    res.status(200).send('Health check successful');
+  });
+
   // Logging relevant variables on the console
   console.log('Starting Hathor Wallet...', {
     wallet: version,
