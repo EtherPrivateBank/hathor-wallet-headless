@@ -1,14 +1,14 @@
 module.exports = {
   // HTTP API Settings
-  http_bind_address: 'localhost',
+  http_bind_address: "localhost",
   http_port: process.env.PORT || 8080,
 
   // Uncomment the following line to enable API Key Auth.
   // http_api_key: 'YOUR_PRIVATE_KEY',
 
   // Hathor Full-node
-  network: 'testnet',
-  server: 'https://node1.testnet.hathor.network/v1a/',
+  network: "testnet",
+  server: "https://node1.testnet.hathor.network/v1a/",
 
   // Tx Mining Service
   // This is optional. If you do not set, the hathor-wallet-lib's default will be used.
@@ -22,12 +22,12 @@ module.exports = {
 
   // HSM Integration
   // These are optional. If all are not present, HSM-related requests will be rejected.
-  hsmHost: null,
-  hsmUsername: null,
-  hsmPassword: null,
+  hsmHost: process.env.HSM_HOST,
+  hsmUsername: process.env.HSM_USER,
+  hsmPassword: process.env.HSM_PASSWORD,
 
   // Only change the URL if you want to use the Sandbox API under 'https://sandbox-api.fireblocks.io'
-  fireblocksUrl: 'https://api.fireblocks.io',
+  fireblocksUrl: "https://api.fireblocks.io",
   fireblocksApiKey: null,
   // This should be a string containing the secret (with line breaks)
   fireblocksApiSecret: null,
@@ -40,7 +40,8 @@ module.exports = {
 
   // Wallet seeds
   seeds: {
-      default: 'tribe menu group celery upset apart crazy away sock sure kidney music rude undo purse select citizen buddy master lamp cave glare treat below',
+    default:
+      "tribe menu group celery upset apart crazy away sock sure kidney music rude undo purse select citizen buddy master lamp cave glare treat below",
   },
 
   // Optional wallet multisig configuration
@@ -71,7 +72,7 @@ module.exports = {
 
   // Optional config so you can set the token you want to use in this wallet
   // If this parameter is set you don't need to pass your token when getting balance or sending tokens
-  tokenUid: '',
+  tokenUid: "",
 
   // Maximum number of addresses to be generated in sequence without usage
   // if not set will use the default from the lib (20)
